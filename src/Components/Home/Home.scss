@@ -1,0 +1,102 @@
+.container {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        .logo{
+            margin-left: 200px;
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .bg-content{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        position: fixed;
+        left: 35%;
+        top: 30%;
+        width: 27%;
+        z-index: 2;
+        input{
+            height: 40px;
+            margin-left: 16%;
+        }
+        button{
+            width: fit-content;
+            margin-top: 8px;
+            img{
+                position: fixed;
+                width: 26%;
+                left: 40%;
+            }
+        }
+    }
+    .bottom{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 726px) {
+    .container {
+        .header .logo {
+            margin-left: 0;
+            img{
+                display: none;
+            }
+        }
+        .content{
+            position: fixed;
+            left: 20%;
+            top: 30%;
+            width: 49%;
+            z-index: 2;
+            button{
+                width: 0;
+                height: 0;
+                line-height: 0;
+                background: none;
+                border: none;
+                img{
+                    position: fixed;
+                    width: 40%;
+                    left: 32%;
+                }
+            }
+        }
+        .bottom{
+            .bot-left{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                img{
+                    width: 62%;
+                }
+            }
+            .bot-right{
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                img{
+                    width: 62%;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
