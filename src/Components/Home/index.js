@@ -25,11 +25,11 @@ const Home = () => {
         }
     
         try {
-            const response = await axios.post('https://be-lucky-money.vercel.app/random-update');
+            const response = await axios.post('https://d3c4-2402-800-6145-ccaa-489f-345e-7c4-a3f6.ngrok-free.app/random-update');
             setResult(response.data);
             setModalVisible(true);
     
-            const saveResponse = await axios.post('https://be-lucky-money.vercel.app/save-user-result', {
+            const saveResponse = await axios.post('https://d3c4-2402-800-6145-ccaa-489f-345e-7c4-a3f6.ngrok-free.app/save-user-result', {
                 name: name,
                 randomAmount: response.data.newRandomAmount
             });
@@ -42,7 +42,7 @@ const Home = () => {
               return;
             }
     
-            const res = await axios.get('https://be-lucky-money.vercel.app/total-users');
+            const res = await axios.get('https://d3c4-2402-800-6145-ccaa-489f-345e-7c4-a3f6.ngrok-free.app/total-users');
             setTotalUsers(res.data.totalUsers);
         } catch (error) {
             console.error('Error calling /random-update:', error);
