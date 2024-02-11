@@ -71,6 +71,9 @@
                 line-height: 0;
                 background: none;
                 border: none;
+                &:active, &:hover{
+                    background: none;
+                }
                 img{
                     position: fixed;
                     width: 40%;
